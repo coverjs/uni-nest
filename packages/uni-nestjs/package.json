@@ -1,7 +1,7 @@
 {
   "name": "uni-nestjs",
   "version": "0.0.0",
-  "description": "一个用最简单的方式定义统一接口格式的nestjs库.",
+  "description": "这是一个用最简单的方式定义统一接口格式, 并自动生成swagger文档的nestjs工具库.",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "scripts": {
@@ -16,7 +16,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "release": "release-it"
   },
   "keywords": [],
   "author": "",
@@ -40,7 +41,12 @@
     "@nestjs/jwt": "^10.2.0",
     "dayjs": "^1.11.10",
     "ip": "^2.0.1",
-    "request-ip": "^3.3.0"
+    "request-ip": "^3.3.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0"
   },
   "devDependencies": {
     "@types/ip": "^1.1.3",
