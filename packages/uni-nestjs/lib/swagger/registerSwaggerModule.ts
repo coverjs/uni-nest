@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { INestApplication } from "@nestjs/common";
-import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
-import { SwaggerOptions } from "./types";
-import { CommonResponseVo } from "../schemas";
+import { INestApplication } from '@nestjs/common';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { SwaggerOptions } from './types';
+import { CommonResponseVo } from '../schemas';
 
 export const registerSwaggerModule = (
   app: INestApplication,
@@ -28,7 +28,7 @@ export const registerSwaggerModule = (
     contact = [],
     version,
     license = [],
-    swaggerPathPrefix = "/docs",
+    swaggerPathPrefix = '/docs',
   } = swaggerOptions;
 
   const options = new DocumentBuilder()

@@ -1,14 +1,14 @@
-import { Type } from "@nestjs/common";
+import { Type } from '@nestjs/common';
 import {
   ApiBodyOptions,
   ApiParamOptions,
   ApiQueryOptions,
-} from "@nestjs/swagger";
-import { Method } from "../constants";
+} from '@nestjs/swagger';
+import { Method } from '../constants';
 
-export * from "./bootstrap";
-export type MethodType = "Post" | "Get" | "Delete" | "Put" | "Patch";
-export type IType = "boolean" | "number" | "string" | "array" | Type<any>;
+export * from './bootstrap';
+export type MethodType = 'Post' | 'Get' | 'Delete' | 'Put' | 'Patch';
+export type IType = 'boolean' | 'number' | 'string' | 'array' | Type<any>;
 
 export interface ResponseOptions {
   /**
@@ -40,7 +40,7 @@ export interface ListResponseOptions extends ResponseOptions {
 
 type SchemaType =
   | {
-      type?: "number";
+      type?: 'number';
 
       /**
        * 示例
@@ -48,26 +48,26 @@ type SchemaType =
       example?: any;
     }
   | {
-      type?: "string";
+      type?: 'string';
 
       /**
        * 示例
        */
       example?: any;
     }
-  | { type?: "boolean" }
-  | { type?: "object"; schema?: Type<any> }
+  | { type?: 'boolean' }
+  | { type?: 'object'; schema?: Type<any> }
   | {
-      type?: "array";
+      type?: 'array';
       schema?: Type<any>;
-      arrayItemType?: "string" | "number";
+      arrayItemType?: 'string' | 'number';
 
       /**
        * 示例
        */
       example?: any;
     }
-  | { type?: "list"; schema: Type<any> };
+  | { type?: 'list'; schema: Type<any> };
 
 export type UnityResponseOptions = ResponseOptions & SchemaType;
 
@@ -129,5 +129,5 @@ export interface DefineApiOptions {
   /**
    * @summar 定义该接口的响应数据片段类型
    */
-  response?: Omit<ResponseOptions, "status"> & SchemaType;
+  response?: Omit<ResponseOptions, 'status'> & SchemaType;
 }

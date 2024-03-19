@@ -1,11 +1,11 @@
 // Copyright 2024 hacxy
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -25,7 +25,7 @@ export class UniBusinessException extends HttpException {
     if (typeof err === 'string') {
       err = {
         code: BUSINESS_ERROR_CODE.COMMON.code,
-        msg: err
+        msg: err,
       };
     }
     super(err, BUSINESS_ERROR_CODE.COMMON.code);
@@ -52,7 +52,7 @@ export class UniBusinessException extends HttpException {
   static throwFieldsIncorrect(msg: string = '字段不合法') {
     throw new UniBusinessException({
       code: BUSINESS_ERROR_CODE.FIELD_INCORRECT.code,
-      msg
+      msg,
     });
   }
 

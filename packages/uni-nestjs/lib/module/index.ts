@@ -1,16 +1,16 @@
-import { Module } from "@nestjs/common";
-import { APP_FILTER, APP_GUARD, APP_INTERCEPTOR } from "@nestjs/core";
-import { UniBaseExceptionsFilter, UniHttpExeptionsFilter } from "../exceptions";
-import { JwtAuthGuard } from "../guard";
-import { ModuleType, Options } from "../types";
-import { UniResponseInterceptor } from "../interceptor";
+import { Module } from '@nestjs/common';
+import { APP_FILTER, APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
+import { UniBaseExceptionsFilter, UniHttpExeptionsFilter } from '../exceptions';
+import { JwtAuthGuard } from '../guard';
+import { ModuleType, Options } from '../types';
+import { UniResponseInterceptor } from '../interceptor';
 
 export const handleUniModule = (module: ModuleType, options: Options) => {
   @Module({
     imports: [module],
     providers: [
       {
-        provide: "JwtVerifyOptions",
+        provide: 'JwtVerifyOptions',
         useValue: options?.jwtVerifyOptions || {},
       },
       {

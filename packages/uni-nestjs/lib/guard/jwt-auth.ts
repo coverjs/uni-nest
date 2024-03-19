@@ -3,11 +3,11 @@ import {
   ExecutionContext,
   Inject,
   Injectable,
-} from "@nestjs/common";
-import { Reflector } from "@nestjs/core";
-import { JwtService, JwtVerifyOptions } from "@nestjs/jwt";
-import { BUSINESS_HTTP_CODE_KEY, IS_PUBLIC_KEY } from "../constants";
-import { UniBusinessException } from "../exceptions/business.exceptions";
+} from '@nestjs/common';
+import { Reflector } from '@nestjs/core';
+import { JwtService, JwtVerifyOptions } from '@nestjs/jwt';
+import { BUSINESS_HTTP_CODE_KEY, IS_PUBLIC_KEY } from '../constants';
+import { UniBusinessException } from '../exceptions/business.exceptions';
 
 /**
  * jwt全局校验守卫
@@ -22,7 +22,7 @@ import { UniBusinessException } from "../exceptions/business.exceptions";
 export class JwtAuthGuard implements CanActivate {
   jwtVerifyOptions: JwtVerifyOptions;
   constructor(
-    @Inject("JwtVerifyOptions") jwtVerifyOptions: JwtVerifyOptions,
+    @Inject('JwtVerifyOptions') jwtVerifyOptions: JwtVerifyOptions,
     private reflector: Reflector,
   ) {
     this.jwtVerifyOptions = jwtVerifyOptions;
@@ -36,7 +36,7 @@ export class JwtAuthGuard implements CanActivate {
     const token = context
       .switchToRpc()
       .getData()
-      .headers.authorization?.replace("Bearer ", "");
+      .headers.authorization?.replace('Bearer ', '');
 
     // 获取公开状态
     const isPublic = this.reflector.getAllAndOverride<boolean>(IS_PUBLIC_KEY, [

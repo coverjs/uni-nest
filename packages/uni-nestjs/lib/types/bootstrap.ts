@@ -1,6 +1,6 @@
-import { INestApplication, NestApplicationOptions } from "@nestjs/common";
-import { SwaggerOptions } from "../swagger";
-import { JwtVerifyOptions } from "@nestjs/jwt";
+import { INestApplication, NestApplicationOptions } from '@nestjs/common';
+import { SwaggerOptions } from '../swagger';
+import { JwtVerifyOptions } from '@nestjs/jwt';
 
 class Module {}
 export type ModuleType = typeof Module;

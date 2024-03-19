@@ -1,17 +1,17 @@
-import { MethodMap } from "../constants";
-import { applyDecorators } from "@nestjs/common";
+import { MethodMap } from '../constants';
+import { applyDecorators } from '@nestjs/common';
 import {
   ApiBearerAuth,
   ApiBody,
   ApiOperation,
   ApiParam,
   ApiQuery,
-} from "@nestjs/swagger";
-import { UniHttpCode } from "lib/decorators/httpCode";
-import { Public } from ".";
-import { Method } from "../constants";
-import { DefineApiOptions } from "../types";
-import { UniApiResponse } from "./apiResponse";
+} from '@nestjs/swagger';
+import { UniHttpCode } from 'lib/decorators/httpCode';
+import { Public } from '.';
+import { Method } from '../constants';
+import { DefineApiOptions } from '../types';
+import { UniApiResponse } from './apiResponse';
 
 /**
  * 定义接口装饰器
@@ -21,7 +21,7 @@ import { UniApiResponse } from "./apiResponse";
 export const UniDefine = (options: DefineApiOptions) => {
   const {
     query,
-    path = "",
+    path = '',
     method = Method.Get,
     httpCode = 200,
     isPublic,
