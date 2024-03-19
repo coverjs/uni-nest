@@ -1,10 +1,10 @@
 import { NestFactory } from '@nestjs/core';
-import { registerSwaggerModule } from 'lib/swagger/registerSwaggerModule';
+import { registerSwaggerModule } from './swagger/registerSwaggerModule';
 import { Bootstrap } from './types';
 import { DEFAULT_PORT } from './constants';
 import { printPath } from './utils';
 import { handleUniModule } from 'lib/module';
-
+export * from '@nestjs/swagger';
 export * from './constants';
 export * from './decorators';
 export * from './exceptions';
