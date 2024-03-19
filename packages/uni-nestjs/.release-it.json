@@ -13,7 +13,7 @@
     "publish": true
   },
   "hooks": {
-    "after:bump": "npm run sync-template && npm run build",
+    "after:bump": "npm run build",
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "plugins": {
