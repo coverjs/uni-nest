@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.2.0](https://github.com/hacxy/uni-nest/compare/v0.1.0...v0.2.0) (2024-04-02)
+
 ## 0.1.0 (2024-03-19)
 
 
