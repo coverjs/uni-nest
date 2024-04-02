@@ -7,7 +7,9 @@ import {
 import { Method } from '../constants';
 
 export * from './bootstrap';
+// export * from './common.vo';
 export type MethodType = 'Post' | 'Get' | 'Delete' | 'Put' | 'Patch';
+
 export type IType = 'boolean' | 'number' | 'string' | 'array' | Type<any>;
 
 export interface ResponseOptions {

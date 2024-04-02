@@ -8,7 +8,7 @@ import {
   ApiQuery,
 } from '@nestjs/swagger';
 import { UniHttpCode } from 'lib/decorators/httpCode';
-import { Public } from '.';
+import { UniPublic } from './public';
 import { Method } from '../constants';
 import { DefineApiOptions } from '../types';
 import { UniApiResponse } from './apiResponse';
@@ -44,7 +44,7 @@ export const UniDefine = (options: DefineApiOptions) => {
   addDecorators(UniApiResponse({ ...(response as any), status: httpCode }));
 
   if (!isPublic) addDecorators(ApiBearerAuth());
-  if (isPublic) addDecorators(Public());
+  if (isPublic) addDecorators(UniPublic());
   // if (isAllowNoPerm) addDecorators(AllowNoPerm());
   if (query) addDecorators(ApiQuery(query));
   if (body) addDecorators(ApiBody(body));

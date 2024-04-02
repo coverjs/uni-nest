@@ -1,7 +1,6 @@
-import { Body, Controller, Param } from '@nestjs/common';
+import { Controller } from '@nestjs/common';
 import { AppService } from './app.service';
-import { Method, UniDefine } from 'uni-nestjs';
-import { AppValue } from 'src/app.vo';
+import { Method, UniDefine } from 'uni-nest';
 
 @Controller()
 export class AppController {
@@ -10,16 +9,11 @@ export class AppController {
   @UniDefine({
     summary: '测试get请求',
     isPublic: true,
-    path: ':id',
-    param: {
-      name: 'id',
-    },
     response: {
       type: 'string',
     },
   })
-  getHello(@Param() param): string {
-    console.log(param);
+  getHello(): string {
     return this.appService.getHello();
   }
 
@@ -29,21 +23,8 @@ export class AppController {
     method: Method.Post,
     description: '测试post请求的描述',
     httpCode: 200,
-    // query: {
-    //   type: AppValue,
-    // },
-    // body: {
-    //   type: AppValue,
-    // },
-    param: {
-      name: 'id',
-    },
-    response: {
-      schema: AppValue,
-    },
   })
-  testPost(@Body() data) {
-    console.log(data);
+  testPost() {
     return this.appService.testPost();
   }
 }

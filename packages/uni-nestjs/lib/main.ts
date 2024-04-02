@@ -3,7 +3,9 @@ import { registerSwaggerModule } from './swagger/registerSwaggerModule';
 import { Bootstrap } from './types';
 import { DEFAULT_PORT } from './constants';
 import { printPath } from './utils';
-import { handleUniModule } from 'lib/module';
+import { handleUniModule } from './module';
+import { CommonResponseVo } from 'lib/schemas';
+
 export * from '@nestjs/swagger';
 export * from './constants';
 export * from './decorators';
@@ -16,6 +18,9 @@ export * from './module';
 export const bootstrap: Bootstrap = async (AppModule, options = {}) => {
   const { swaggerOptions, appOptions } = options;
 
+  global.UniNestData = {
+    CommonVo: swaggerOptions.customResponseType || CommonResponseVo,
+  };
   const UniAppModule = handleUniModule(AppModule, options);
   const app = await NestFactory.create(UniAppModule, appOptions);
 

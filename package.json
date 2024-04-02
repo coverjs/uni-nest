@@ -2,7 +2,7 @@
   "dependencies": {
     "@nestjs/mapped-types": "*"
   },
-  "name": "uni-nestjs-root",
+  "name": "uni-nest-root",
   "version": "1.0.0",
   "description": "",
   "scripts": {

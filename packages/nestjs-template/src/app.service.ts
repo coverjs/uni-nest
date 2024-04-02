@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { AppValue } from 'src/app.vo';
 
 @Injectable()
 export class AppService {
@@ -7,7 +6,7 @@ export class AppService {
     return 'Hello World!';
   }
 
-  testPost(): AppValue {
+  testPost() {
     return {
       name: 'hacxy',
     };
