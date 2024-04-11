@@ -14,47 +14,47 @@ import { UnityResponseOptions } from '../types';
 
 type Model = SchemaObject | ReferenceObject;
 
-// 处理数据模型
+// 处理数据类型模型
 const handleModel = (
-  options: UnityResponseOptions & { schema?: Type<any>; example?: any },
+  options: UnityResponseOptions & { model?: Type<any>; example?: any },
 ): SchemaObject | ReferenceObject => {
-  const { type, description, schema, example } = options;
+  const { type, description, model, example } = options;
 
   switch (type) {
     case 'object':
-      if (!schema) return {};
+      if (!model) return {};
       return {
         properties: {
           data: {
             description,
-            allOf: [{ $ref: getSchemaPath(schema) }],
+            allOf: [{ $ref: getSchemaPath(model) }],
           },
         },
       } as Model;
 
     case 'list':
-      if (!schema) return {};
+      if (!model) return {};
       return {
         properties: {
           data: {
             description,
             required: ['list', 'total'],
             properties: {
-              list: { type: 'array', items: { $ref: getSchemaPath(schema) } },
+              list: { type: 'array', items: { $ref: getSchemaPath(model) } },
               total: { type: 'number', default: 0 },
             },
           },
         },
       } as Model;
     case 'array':
-      if (!options.arrayItemType && !schema) return {};
+      if (!options.arrayItemType && !model) return {};
       return {
         properties: {
           data: {
             description,
             type: 'array',
             example,
-            items: { type: options.arrayItemType, $ref: getSchemaPath(schema) },
+            items: { type: options.arrayItemType, $ref: getSchemaPath(model) },
           },
         },
       } as Model;
@@ -87,14 +87,14 @@ const handleSwaggerResponse = (
 
 // 自定义 swagger 统一响应数据模型
 export const UniApiResponse = (
-  options?: UnityResponseOptions & { schema?: Type<any> },
+  options?: UnityResponseOptions & { model?: Type<any> },
 ) => {
   if (!options.type) options.type = 'object';
-  const { schema } = options;
+  const { model } = options;
 
   let decorators = [ApiResponse(handleSwaggerResponse(options))];
 
-  if (schema) decorators = [...decorators, ApiExtraModels(schema)];
+  if (model) decorators = [...decorators, ApiExtraModels(model)];
 
   return applyDecorators(...decorators);
 };

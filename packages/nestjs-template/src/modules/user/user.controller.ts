@@ -11,6 +11,10 @@ export class UserController {
 
   @UniDefine({
     method: Method.Post,
+    response: {
+      type: 'object',
+      model: CreateUserDto,
+    },
   })
   create(@Body() createUserDto: CreateUserDto) {
     return this.userService.create(createUserDto);

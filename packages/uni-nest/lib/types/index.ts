@@ -43,33 +43,21 @@ export interface ListResponseOptions extends ResponseOptions {
 type SchemaType =
   | {
       type?: 'number';
-
-      /**
-       * 示例
-       */
       example?: any;
     }
   | {
       type?: 'string';
-
-      /**
-       * 示例
-       */
       example?: any;
     }
   | { type?: 'boolean' }
-  | { type?: 'object'; schema?: Type<any> }
+  | { type?: 'object'; model?: Type<any> }
   | {
       type?: 'array';
-      schema?: Type<any>;
+      model?: Type<any>;
       arrayItemType?: 'string' | 'number';
-
-      /**
-       * 示例
-       */
       example?: any;
     }
-  | { type?: 'list'; schema: Type<any> };
+  | { type?: 'list'; model: Type<any> };
 
 export type UnityResponseOptions = ResponseOptions & SchemaType;
 
