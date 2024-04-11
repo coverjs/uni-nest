@@ -42,9 +42,8 @@ export const UniDefine = (options: DefineApiOptions) => {
   };
 
   addDecorators(UniApiResponse({ ...(response as any), status: httpCode }));
-
+  addDecorators(UniPublic(isPublic));
   if (!isPublic) addDecorators(ApiBearerAuth());
-  if (isPublic) addDecorators(UniPublic());
   // if (isAllowNoPerm) addDecorators(AllowNoPerm());
   if (query) addDecorators(ApiQuery(query));
   if (body) addDecorators(ApiBody(body));
