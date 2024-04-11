@@ -18,9 +18,10 @@ export * from './module';
 export const bootstrap: Bootstrap = async (AppModule, options = {}) => {
   const { swaggerOptions, appOptions } = options;
 
-  global.UniNestData = {
-    CommonVo: swaggerOptions.customResponseType || CommonResponseVo,
-  };
+  // global.UniNestData = {
+  //   CommonVo: swaggerOptions.customResponseType || CommonResponseVo,
+  // };
+
   const UniAppModule = handleUniModule(AppModule, options);
   const app = await NestFactory.create(UniAppModule, appOptions);
 
