@@ -7,7 +7,8 @@
   "description": "",
   "scripts": {
     "dev": "pnpm -F uni-nest run dev",
-    "test:dev": "pnpm -F nestjs-template run dev"
+    "test:dev": "pnpm -F nestjs-template run dev",
+    "release": "pnpm -F uni-nest run release"
   },
   "keywords": [],
   "author": "",
