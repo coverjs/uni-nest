@@ -1,6 +1,6 @@
 {
   "name": "uni-nest",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "这是一个用最简单的方式定义统一接口格式, 并自动生成swagger文档的Nestjs工具库.",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",

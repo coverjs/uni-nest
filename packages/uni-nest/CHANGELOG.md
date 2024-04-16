@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/hacxy/uni-nest/compare/v0.2.2...v0.2.3) (2024-04-16)
+
+
+### 🐛 Bug Fixes
+
+* 取消错误信息打印 ([d5d477c](https://github.com/hacxy/uni-nest/commit/d5d477c1843da67c8572e9db70ad4fea6096ce4d))
+
 ## [0.2.2](https://github.com/hacxy/uni-nest/compare/v0.2.1...v0.2.2) (2024-04-11)
 
 
