@@ -6,7 +6,7 @@
 
 在 Nestjs 项目中, 默认的 `post` 请求响应状态码总是 `201`, 这很不符合国内大多数约定俗成的规范, 尤其是作为前端开发, 我们其实更希望拿到的是 `200` 而不是 `201`. 从官方得到的答案是通过 `@HttpCode()` 这个装饰器来更改某个 `post` 请求的状态码, 这当然即方便又简单, 但需要我在每一个 post 请求上都使用它, 我很反感这种重复的定义, 这不仅冗余而且容易产生纰漏, 我希望能在全局去纠正所有 post 请求的状态码, 同时还能能兼顾到 swagger 文档. 起初我开发这个项目主要目的就是为了去解决这个问题, 但当我实现了这些看似无关紧要的业务逻辑之后, 我发现我还能让它做到更多😋.
 
-## UniNestjs 能做什么
+## UniNest 能做什么
 
 - 默认集成 `@nestjs/swagger`, 通过更简单的选项完成对 `swagger` 文档的配置, 并自动收集 `extraModels`.
 - 统一状态码, 所有请求方式的默认状态码均为 200
@@ -17,6 +17,19 @@
 
 ## 安装
 
+在你的 `nestjs` 项目中安装 `uni-nest`
+
 ```sh
 npm install uni-nest
+```
+
+## 使用
+
+在 `main.ts` 中引入 `uni-nest`, 并从中导出 bootstrap 方法, 调用该方法时, 需要将AppModule传入至该方法的第一个参数
+
+```ts
+import { AppModule } from "./app.module";
+import { bootstrap } from "uni-nest";
+
+bootstrap(AppModule);
 ```
