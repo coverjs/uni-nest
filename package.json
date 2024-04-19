@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "@nestjs/mapped-types": "*"
-  },
   "name": "uni-nest-root",
   "version": "1.0.0",
   "description": "",
@@ -9,15 +6,14 @@
     "dev": "pnpm -F uni-nest run dev",
     "test:dev": "pnpm -F nestjs-template run dev",
     "release": "lerna version --generate-release-notes --yes",
-    "cli:dev": "pnpm -F create-uni-nest run dev"
+    "cli:dev": "pnpm -F create-uni-nest run dev",
+    "cli:build": "pnpm -F create-uni-nest run build"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@lerna-lite/cli": "^3.3.3",
-    "@lerna-lite/publish": "^3.3.3",
-    "@release-it/conventional-changelog": "^8.0.1",
+    "@changesets/cli": "^2.27.1",
     "concurrently": "^8.2.2",
     "release-it": "^17.1.1"
   }
