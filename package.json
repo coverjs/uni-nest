@@ -8,13 +8,17 @@
   "scripts": {
     "dev": "pnpm -F uni-nest run dev",
     "test:dev": "pnpm -F nestjs-template run dev",
-    "release": "pnpm -F uni-nest run release",
+    "release": "lerna version --generate-release-notes --yes",
     "cli:dev": "pnpm -F create-uni-nest run dev"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "@lerna-lite/cli": "^3.3.3",
+    "@lerna-lite/publish": "^3.3.3",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "concurrently": "^8.2.2",
+    "release-it": "^17.1.1"
   }
 }
