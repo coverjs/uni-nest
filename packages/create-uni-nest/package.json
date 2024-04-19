@@ -1,0 +1,35 @@
+{
+  "name": "create-uni-nest",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "hacxy",
+  "license": "MIT",
+  "description": "uni-nest的脚手架工具, 快速帮你创建一个uni-nest项目模板",
+  "bin": {
+    "create-uni-nest": "dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "build:out": "unbuild --out",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.12.5",
+    "@types/prompts": "^2.4.9",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.1",
+    "prompts": "^2.4.2",
+    "typescript": "^5.4.2",
+    "unbuild": "^2.0.0"
+  }
+}
