@@ -5,7 +5,7 @@ export enum Method {
   Post = 'POST',
   Put = 'PUT',
   Delete = 'DELETE',
-  Patch = 'PATCH',
+  Patch = 'PATCH'
 }
 
 // 请求方法映射
@@ -14,10 +14,10 @@ export const MethodMap = {
   [Method.Post]: Post,
   [Method.Put]: Put,
   [Method.Delete]: Delete,
-  [Method.Patch]: Patch,
+  [Method.Patch]: Patch
 };
 
 export const BUSINESS_HTTP_CODE_KEY = 'HttpCode';
 export const IS_PUBLIC_KEY = 'isPublic';
 
-export const DEFAULT_PORT = 1118;
+export const DEFAULT_PORT = 3000;

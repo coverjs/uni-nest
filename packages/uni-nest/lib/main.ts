@@ -2,7 +2,6 @@ import { NestFactory } from '@nestjs/core';
 import { registerSwaggerModule } from './swagger/registerSwaggerModule';
 import { Bootstrap } from './types';
 import { DEFAULT_PORT } from './constants';
-import { printPath } from './utils';
 import { handleUniModule } from './module';
 // import { CommonResponseVo } from 'lib/schemas';
 
@@ -27,8 +26,6 @@ export const bootstrap: Bootstrap = async (AppModule, options = {}) => {
   // 注册swagger
   registerSwaggerModule(app, swaggerOptions);
 
-  const port =
-    options.appOptions?.port || Number(process.env.PORT) || DEFAULT_PORT;
+  const port = options.appOptions?.port || Number(process.env.PORT) || DEFAULT_PORT;
   await app.listen(port);
-  printPath(port);
 };
