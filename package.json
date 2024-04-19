@@ -19,6 +19,7 @@
     "@lerna-lite/publish": "^3.3.3",
     "@release-it/conventional-changelog": "^8.0.1",
     "concurrently": "^8.2.2",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
     "release-it": "^17.1.1"
   }
 }

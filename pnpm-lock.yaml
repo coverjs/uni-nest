@@ -24,6 +24,9 @@ importers:
       concurrently:
         specifier: ^8.2.2
         version: 8.2.2
+      conventional-changelog-conventionalcommits:
+        specifier: ^7.0.2
+        version: 7.0.2
       release-it:
         specifier: ^17.1.1
         version: 17.1.1
