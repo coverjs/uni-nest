@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/hacxy/uni-nest/compare/v0.3.2...v0.3.3) (2024-04-19)
+
+### Bug Fixes
+
+* 测试修复 ([9bedda9](https://github.com/hacxy/uni-nest/commit/9bedda9f956c81dad3b2bbd4184ea7c2cc787cce)) by @Hacxy
+
 ## [0.3.2](https://github.com/hacxy/uni-nest/compare/v0.3.1...v0.3.2) (2024-04-19)
 
 ### 🐛 Bug Fixes | Bug 修复

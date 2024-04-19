@@ -1,8 +1,11 @@
 {
   "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "npmClient": "pnpm",
-  "packages": ["packages/uni-nest", "packages/create-uni-nest"],
+  "packages": [
+    "packages/uni-nest",
+    "packages/create-uni-nest"
+  ],
   "command": {
     "version": {
       "conventionalCommits": true,
