@@ -1,6 +1,6 @@
 {
   "name": "uni-nest",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "这是一个用最简单的方式定义统一接口格式, 并自动生成swagger文档的Nestjs工具库.",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
@@ -23,15 +23,15 @@
   "author": "Hacxy <hacxy.97@outlook.com>",
   "license": "MIT",
   "dependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
     "@nestjs/jwt": "^10.2.0",
     "@nestjs/swagger": "^7.3.0",
     "dayjs": "^1.11.10",
     "ip": "^2.0.1",
     "request-ip": "^3.3.0",
-    "tianjie": "^0.1.0",
-    "@nestjs/common": "^10.0.0",
-    "@nestjs/core": "^10.0.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "tianjie": "^0.1.0"
   },
   "devDependencies": {
     "@types/ip": "^1.1.3",
