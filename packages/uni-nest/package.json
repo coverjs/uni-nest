@@ -20,7 +20,7 @@
     "release": "release-it"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hacxy <hacxy.97@outlook.com>",
   "license": "MIT",
   "dependencies": {
     "@nestjs/jwt": "^10.2.0",

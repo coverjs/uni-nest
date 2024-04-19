@@ -10,9 +10,10 @@
     "cli:build": "pnpm -F create-uni-nest run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hacxy <hacxy.97@outlook.com>",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.1",
     "concurrently": "^8.2.2",
     "release-it": "^17.1.1"
