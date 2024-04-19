@@ -27,7 +27,7 @@ const bootstrap = async () => {
   );
 
   console.log(`
-  项目创建成功:
+  项目创建成功🥳:
 
   cd ${result.projectName}
   npm install

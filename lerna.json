@@ -2,15 +2,12 @@
   "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
   "version": "0.3.4",
   "npmClient": "pnpm",
-  "packages": [
-    "packages/uni-nest",
-    "packages/create-uni-nest"
-  ],
+  "packages": ["packages/uni-nest", "packages/create-uni-nest"],
   "command": {
     "version": {
       "conventionalCommits": true,
       "changelog": true,
-      "changelogIncludeCommitsClientLogin": " by @%a",
+      "changelogIncludeCommitsClientLogin": " by.@%a",
       "createRelease": "github",
       "message": "chore(release): publish new version %v",
       "allowPeerDependenciesUpdate": true
@@ -18,6 +15,40 @@
   },
   "changelogPreset": {
     "name": "conventionalcommits",
-    "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}"
+    "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
+    "types": [
+      {
+        "type": "feat",
+        "section": "✨ Features | 新功能"
+      },
+      {
+        "type": "fix",
+        "section": "🐛 Bug Fixes | Bug 修复"
+      },
+      {
+        "type": "chore",
+        "hidden": true
+      },
+      {
+        "type": "docs",
+        "hidden": true
+      },
+      {
+        "type": "style",
+        "hidden": true
+      },
+      {
+        "type": "refactor",
+        "hidden": true
+      },
+      {
+        "type": "perf",
+        "hidden": true
+      },
+      {
+        "type": "test",
+        "hidden": true
+      }
+    ]
   }
 }
