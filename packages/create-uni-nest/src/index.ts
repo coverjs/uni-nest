@@ -17,6 +17,7 @@ const bootstrap = async () => {
 
   const targetPath = path.resolve(process.cwd(), result.projectName);
   const sourcePath = path.resolve(__dirname, "../template");
+
   fs.cpSync(sourcePath, targetPath, {
     recursive: true,
   });
