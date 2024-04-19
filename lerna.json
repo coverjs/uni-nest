@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "npmClient": "pnpm",
   "packages": ["packages/uni-nest", "packages/create-uni-nest"],
   "command": {
