@@ -2,12 +2,12 @@
   "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
   "version": "0.2.3",
   "npmClient": "pnpm",
-  "packages": ["packages/*"],
+  "packages": ["packages/uni-nest", "packages/create-uni-nest"],
   "command": {
     "version": {
       "conventionalCommits": true,
       "changelog": true,
-      "changelogIncludeCommitsClientLogin": " by %a",
+      "changelogIncludeCommitsClientLogin": " by @%a",
       "createRelease": "github",
       "message": "chore(release): publish new version %v",
       "allowPeerDependenciesUpdate": true
