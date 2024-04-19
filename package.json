@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "pnpm -F uni-nest run dev",
     "test:dev": "pnpm -F nestjs-template run dev",
-    "changed": "lerna version",
+    "changed:major": "lerna version major --generate-release-notes",
+    "changed": "lerna version --generate-release-notes",
     "release": "lerna publish from-package --yes",
     "cli:dev": "pnpm -F create-uni-nest run dev",
     "cli:build": "pnpm -F create-uni-nest run build"
