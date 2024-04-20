@@ -12,7 +12,7 @@
     "cli:build": "pnpm -F create-uni-nest run build"
   },
   "keywords": [],
-  "author": "Hacxy <hacxy.97@outlook.com>",
+  "author": "Hacxy <hacxy.js@outlook.com>",
   "license": "MIT",
   "devDependencies": {
     "@lerna-lite/cli": "^3.3.3",
