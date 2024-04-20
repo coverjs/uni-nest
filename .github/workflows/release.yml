@@ -1,0 +1,36 @@
+name: 项目发布
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+jobs:
+  release:
+    runs-on: ubuntu-latest # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: 项目安装依赖
+        run: pnpm install --no-frozen-lockfile
+
+      - name: 打包项目
+        run: |
+          pnpm build
+          pnpm cli:build
+
+      - name: 更新npmrc
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
+      - name: 发布至npm仓库
+        run: pnpm release
