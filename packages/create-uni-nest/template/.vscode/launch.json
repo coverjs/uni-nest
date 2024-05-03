@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // 调试的类型
+      "type": "node",
+      // 调试的方式分为 launch 和 attach 2种，因为package已经有了debug方法，我们只要attach到9229端口就行了
+      "request": "attach",
+      // 自定义名字
+      "name": "Attach NestJS WS",
+      // attach 对应的端口
+      "port": 9229,
+      // 发生变更时是否重启
+      "restart": true
+    }
+  ]
+}

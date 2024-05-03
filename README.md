@@ -15,21 +15,34 @@
 - 默认注册全局异常过滤器处理业务逻辑异常、标准Http异常以及可扩展的自定义业务异常
 - 一切从简, 接口的定义只需要在一个装饰器中完成
 
-## 安装
-
-在你的 `nestjs` 项目中安装 `uni-nest`
-
-```sh
-npm install uni-nest
-```
-
 ## 使用
 
-在 `main.ts` 中引入 `uni-nest`, 并从中导出 bootstrap 方法, 调用该方法时, 需要将AppModule传入至该方法的第一个参数
+使用脚手架创建一个使用uni-nest的 nestjs 项目
 
-```ts
-import { AppModule } from "./app.module";
-import { bootstrap } from "uni-nest";
+```sh
+npm create uni-nest@latest
+```
 
-bootstrap(AppModule);
+### 开发环境
+
+```sh
+npm run start:dev
+```
+
+### debug
+
+```sh
+npm run start:debug
+```
+
+### 生产环境
+
+```sh
+npm run start:prod
+```
+
+### 测试
+
+```sh
+npm run test
 ```
