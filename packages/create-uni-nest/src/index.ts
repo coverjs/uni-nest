@@ -26,6 +26,11 @@ const bootstrap = async () => {
     path.resolve(targetPath, ".gitignore"),
   );
 
+  fs.renameSync(
+    path.resolve(targetPath, "_env"),
+    path.resolve(targetPath, ".env"),
+  );
+
   console.log(`
   项目创建成功🥳:
 
