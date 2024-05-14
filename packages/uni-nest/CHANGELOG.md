@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.0](https://github.com/hacxy/uni-nest/compare/v0.3.8...v0.4.0) (2024-05-14)
+
+### ✨ Features | 新功能
+
+* 新增user参数装饰器 ([55e7a60](https://github.com/hacxy/uni-nest/commit/55e7a60e69ea4b038d61b746ea9b053383fb4eba)) by.@Hacxy
+
 ## [0.3.7](https://github.com/hacxy/uni-nest/compare/v0.3.6...v0.3.7) (2024-05-03)
 
 **Note:** Version bump only for package uni-nest
