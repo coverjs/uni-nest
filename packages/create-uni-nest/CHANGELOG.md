@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/hacxy/uni-nest/compare/v0.4.2...v0.4.3) (2024-05-14)
+
+### 🐛 Bug Fixes | Bug 修复
+
+* **create-uni-nest:** 模板加入环境变量配置 ([20af2f1](https://github.com/hacxy/uni-nest/commit/20af2f139966169abaa8d90720df42cfda3f9f2a)) by.@Hacxy
+
 ## [0.4.2](https://github.com/hacxy/uni-nest/compare/v0.4.1...v0.4.2) (2024-05-14)
 
 ### 🚀 Performance Improvements | 优化
