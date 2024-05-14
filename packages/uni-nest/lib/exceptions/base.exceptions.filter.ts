@@ -1,10 +1,4 @@
-import {
-  ArgumentsHost,
-  Catch,
-  ExceptionFilter,
-  HttpStatus,
-  ServiceUnavailableException,
-} from '@nestjs/common';
+import { ArgumentsHost, Catch, ExceptionFilter, HttpStatus, ServiceUnavailableException } from '@nestjs/common';
 
 /*
  * 非 HTTP 标准的异常过滤器 (代码逻辑错误)
@@ -25,14 +19,14 @@ export class UniBaseExceptionsFilter implements ExceptionFilter {
         statusCode: HttpStatus.SERVICE_UNAVAILABLE,
         timestamp: new Date().toISOString(),
         path: request.url,
-        msg: new ServiceUnavailableException().getResponse(),
+        msg: new ServiceUnavailableException().getResponse()
       });
     } else {
       response.status(HttpStatus.SERVICE_UNAVAILABLE).send({
         statusCode: HttpStatus.SERVICE_UNAVAILABLE,
         timestamp: new Date().toISOString(),
         path: request.url,
-        ...(new ServiceUnavailableException().getResponse() as any),
+        ...(new ServiceUnavailableException().getResponse() as any)
       });
     }
   }

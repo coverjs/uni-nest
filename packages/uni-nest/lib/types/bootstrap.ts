@@ -26,7 +26,4 @@ export interface Options {
   jwtVerifyOptions?: JwtVerifyOptions;
 }
 
-export type Bootstrap = (
-  module: ModuleType,
-  options?: Options,
-) => Promise<void>;
+export type Bootstrap = (module: ModuleType, options?: Options) => Promise<void>;

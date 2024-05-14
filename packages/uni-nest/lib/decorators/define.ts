@@ -1,12 +1,6 @@
 import { MethodMap } from '../constants';
 import { applyDecorators } from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
-  ApiOperation,
-  ApiParam,
-  ApiQuery,
-} from '@nestjs/swagger';
+import { ApiBearerAuth, ApiBody, ApiOperation, ApiParam, ApiQuery } from '@nestjs/swagger';
 import { UniHttpCode } from 'lib/decorators/httpCode';
 import { UniPublic } from './public';
 import { Method } from '../constants';
@@ -29,13 +23,9 @@ export const UniDefine = (options: DefineApiOptions) => {
     body,
     summary,
     description,
-    param,
+    param
   } = options;
-  let decoratorsArr = [
-    ApiOperation({ summary, description }),
-    MethodMap[method](path),
-    UniHttpCode(httpCode),
-  ];
+  let decoratorsArr = [ApiOperation({ summary, description }), MethodMap[method](path), UniHttpCode(httpCode)];
 
   const addDecorators = (decorators) => {
     decoratorsArr = [...decoratorsArr, decorators];

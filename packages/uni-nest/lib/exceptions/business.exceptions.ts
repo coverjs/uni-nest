@@ -11,7 +11,7 @@ export class UniBusinessException extends HttpException {
     if (typeof err === 'string') {
       err = {
         code: BUSINESS_ERROR_CODE.COMMON.code,
-        msg: err,
+        msg: err
       };
     }
     super(err, BUSINESS_ERROR_CODE.COMMON.code);
@@ -38,7 +38,7 @@ export class UniBusinessException extends HttpException {
   static throwFieldsIncorrect(msg: string = '字段不合法') {
     throw new UniBusinessException({
       code: BUSINESS_ERROR_CODE.FIELD_INCORRECT.code,
-      msg,
+      msg
     });
   }
 

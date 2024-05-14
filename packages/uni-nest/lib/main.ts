@@ -3,7 +3,6 @@ import { registerSwaggerModule } from './swagger/registerSwaggerModule';
 import { Bootstrap } from './types';
 import { DEFAULT_PORT } from './constants';
 import { handleUniModule } from './module';
-// import { CommonResponseVo } from 'lib/schemas';
 
 export * from '@nestjs/swagger';
 export * from './constants';
@@ -13,6 +12,7 @@ export * from './guard';
 export * from './interceptor';
 export * from './swagger';
 export * from './module';
+export { DefineApiOptions } from './types';
 
 export const bootstrap: Bootstrap = async (AppModule, options = {}) => {
   const { swaggerOptions, appOptions } = options;

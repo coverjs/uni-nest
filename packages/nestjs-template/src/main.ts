@@ -1,19 +1,14 @@
-// import { ApiProperty } from 'uni-nest';
 import { AppModule } from './app.module';
 import { bootstrap } from 'uni-nest';
-// class CommonVo {
-//   @ApiProperty()
-//   statusCode: number;
-//   @ApiProperty()
-//   message: string;
-// }
 
 bootstrap(AppModule, {
   swaggerOptions: {
-    title: '测试swagger docs',
-    // customResponseType: CommonVo,
+    title: 'nestjs模板接口文档',
+    description: '这是一个nestjs模板项目的接口文档',
+    version: '1.0.0',
+    license: ['MIT']
   },
   jwtVerifyOptions: {
-    secret: 'ss',
-  },
+    secret: process.env.JWT_SECRET
+  }
 });

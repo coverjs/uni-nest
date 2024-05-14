@@ -11,28 +11,28 @@ export const handleUniModule = (module: ModuleType, options: Options) => {
     providers: [
       {
         provide: 'JwtVerifyOptions',
-        useValue: options?.jwtVerifyOptions || {},
+        useValue: options?.jwtVerifyOptions || {}
       },
       {
         provide: APP_GUARD,
-        useClass: JwtAuthGuard,
+        useClass: JwtAuthGuard
       },
       // 统一响应格式
       {
         provide: APP_INTERCEPTOR,
-        useValue: new UniResponseInterceptor(),
+        useValue: new UniResponseInterceptor()
       },
       // 注册基本错误过滤器
       {
         provide: APP_FILTER,
-        useClass: UniBaseExceptionsFilter,
+        useClass: UniBaseExceptionsFilter
       },
       // 注册http错误过滤器
       {
         provide: APP_FILTER,
-        useClass: UniHttpExeptionsFilter,
-      },
-    ],
+        useClass: UniHttpExeptionsFilter
+      }
+    ]
   })
   class UniAppModule {}
 

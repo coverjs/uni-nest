@@ -4,7 +4,7 @@
   "type": "module",
   "author": "Hacxy <hacxy.97@outlook.com>",
   "license": "MIT",
-  "description": "uni-nest的脚手架工具, 快速帮你创建一个uni-nest项目模板",
+  "description": "uni-nest的脚手架工具, 快速创建uni-nest项目模板",
   "bin": {
     "create-uni-nest": "dist/index.mjs"
   },

@@ -1,24 +1,4 @@
-// Copyright 2024 hacxy
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     https://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-import {
-  ArgumentsHost,
-  Catch,
-  ExceptionFilter,
-  HttpException,
-  HttpStatus,
-} from '@nestjs/common';
+import { ArgumentsHost, Catch, ExceptionFilter, HttpException, HttpStatus } from '@nestjs/common';
 import * as dayjs from 'dayjs';
 import type { Request, Response } from 'express';
 import { UniBusinessException } from './business.exceptions';
@@ -40,10 +20,9 @@ export class UniHttpExeptionsFilter implements ExceptionFilter {
     if (exception instanceof UniBusinessException) {
       const error: any = exception.getResponse();
 
-      console.log(error);
       respones.status(error.statusCode || respones.statusCode).send({
         code: error.code,
-        msg: error.msg,
+        msg: error.msg
       });
       return;
     }
@@ -55,14 +34,14 @@ export class UniHttpExeptionsFilter implements ExceptionFilter {
         code: status,
         timestamp: time,
         path: request.url,
-        msg: exResponse,
+        msg: exResponse
       };
     } else {
       responseJson = {
         code: status,
         timestamp: time,
         path: request.url,
-        msg: exResponse.message,
+        msg: exResponse.message
       };
     }
 

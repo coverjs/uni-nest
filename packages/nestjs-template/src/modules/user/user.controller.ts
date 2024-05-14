@@ -1,41 +1,61 @@
-import { Controller, Get, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Body, Param } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { ApiTags, Method, UniDefine } from 'uni-nest';
+import { User, ApiTags, Method, UniDefine } from 'uni-nest';
+import { MyUniDefine } from '../../decorators';
 
-@ApiTags('用户接口')
+@ApiTags('用户')
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @UniDefine({
+  @MyUniDefine({
+    summary: '创建用户',
     method: Method.Post,
-    response: {
-      type: 'object',
-      model: CreateUserDto,
-    },
+    body: {
+      type: CreateUserDto
+    }
   })
-  create(@Body() createUserDto: CreateUserDto) {
+  create(@Body() createUserDto: CreateUserDto, @User() user) {
+    console.log(user);
     return this.userService.create(createUserDto);
   }
 
-  @Get()
+  @UniDefine({
+    summary: '查询所有用户',
+    method: Method.Get
+  })
   findAll() {
     return this.userService.findAll();
   }
 
-  @Get(':id')
+  @UniDefine({
+    summary: '查询单个用户',
+    method: Method.Get,
+    path: '/:id'
+  })
   findOne(@Param('id') id: string) {
     return this.userService.findOne(+id);
   }
 
-  @Patch(':id')
+  @UniDefine({
+    summary: '更新用户',
+    method: Method.Patch,
+    path: '/:id',
+    body: {
+      type: UpdateUserDto
+    }
+  })
   update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
     return this.userService.update(+id, updateUserDto);
   }
 
-  @Delete(':id')
+  @UniDefine({
+    summary: '删除用户',
+    method: Method.Delete,
+    path: '/:id'
+  })
   remove(@Param('id') id: string) {
     return this.userService.remove(+id);
   }

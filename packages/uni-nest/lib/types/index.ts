@@ -1,9 +1,5 @@
 import { Type } from '@nestjs/common';
-import {
-  ApiBodyOptions,
-  ApiParamOptions,
-  ApiQueryOptions,
-} from '@nestjs/swagger';
+import { ApiBodyOptions, ApiParamOptions, ApiQueryOptions } from '@nestjs/swagger';
 import { Method } from '../constants';
 
 export * from './bootstrap';
@@ -94,12 +90,6 @@ export interface DefineApiOptions {
    * @default false
    */
   isPublic?: boolean;
-
-  /**
-   * @summary 接口是否忽略权限校验
-   * @default false
-   */
-  isAllowNoPerm?: boolean;
 
   /**
    * @summary 定义该接口的query数据片段类型
