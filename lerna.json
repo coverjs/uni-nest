@@ -2,10 +2,7 @@
   "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
   "version": "0.4.0",
   "npmClient": "pnpm",
-  "packages": [
-    "packages/uni-nest",
-    "packages/create-uni-nest"
-  ],
+  "packages": ["packages/uni-nest", "packages/create-uni-nest"],
   "command": {
     "version": {
       "conventionalCommits": true,
@@ -46,7 +43,7 @@
       },
       {
         "type": "perf",
-        "hidden": true
+        "section": "🚀 Performance Improvements | 性能优化"
       },
       {
         "type": "test",
