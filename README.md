@@ -20,6 +20,7 @@
 使用脚手架创建一个使用uni-nest的 nestjs 项目
 
 ```sh
+# 需要 nodejs 18+
 npm create uni-nest@latest
 ```
 
