@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/hacxy/uni-nest/compare/v0.4.1...v0.4.2) (2024-05-14)
+
+### 🚀 Performance Improvements | 优化
+
+* update template ([1f7408e](https://github.com/hacxy/uni-nest/commit/1f7408e05851d6d2f05933dcd6b84477c06ecbc6)) by.@Hacxy
+
 ## [0.4.1](https://github.com/hacxy/uni-nest/compare/v0.4.0...v0.4.1) (2024-05-14)
 
 ### 🚀 Performance Improvements | 性能优化
