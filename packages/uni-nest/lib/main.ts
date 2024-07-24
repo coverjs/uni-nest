@@ -12,6 +12,8 @@ export * from './guard';
 export * from './interceptor';
 export * from './swagger';
 export * from './module';
+export * from './utils';
+
 export { DefineApiOptions } from './types';
 
 export const bootstrap: Bootstrap = async (AppModule, options = {}) => {
