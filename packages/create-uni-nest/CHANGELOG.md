@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.0](https://github.com/coverjs/uni-nest/compare/v0.4.3...v0.5.0) (2024-07-25)
+
+**Note:** Version bump only for package create-uni-nest
+
 ## [0.4.3](https://github.com/hacxy/uni-nest/compare/v0.4.2...v0.4.3) (2024-05-14)
 
 ### 🐛 Bug Fixes | Bug 修复

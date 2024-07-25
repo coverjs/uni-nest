@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.0](https://github.com/coverjs/uni-nest/compare/v0.4.3...v0.5.0) (2024-07-25)
+
+### ✨ Features | 新功能
+
+* **uni-nest:** 新增加密盐生成方法以及md5加密方法 ([2073143](https://github.com/coverjs/uni-nest/commit/2073143b8d340b5d5cd92af83b9424c3218a1f9a)) by.@hacxy
+
+### 🚀 Performance Improvements | 优化
+
+* **uni-nest:** 调整UniDefine装饰器response的返回类型定义 ([93c8426](https://github.com/coverjs/uni-nest/commit/93c8426016e9042f09508f0dd3010bc7bc78f824)) by.@hacxy
+
 ## [0.4.0](https://github.com/hacxy/uni-nest/compare/v0.3.8...v0.4.0) (2024-05-14)
 
 ### ✨ Features | 新功能
