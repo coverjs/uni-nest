@@ -18,6 +18,7 @@ export const MethodMap = {
 };
 
 export const BUSINESS_HTTP_CODE_KEY = 'HttpCode';
+
 export const IS_PUBLIC_KEY = 'isPublic';
 
 export const DEFAULT_PORT = 3000;

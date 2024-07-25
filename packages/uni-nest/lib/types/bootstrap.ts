@@ -3,6 +3,7 @@ import { SwaggerOptions } from '../swagger';
 import { JwtVerifyOptions } from '@nestjs/jwt';
 
 class Module {}
+
 export type ModuleType = typeof Module;
 
 export interface Options {

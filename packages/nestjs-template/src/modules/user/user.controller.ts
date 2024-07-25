@@ -4,12 +4,12 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User, ApiTags, Method, UniDefine } from 'uni-nest';
 import { MyUniDefine } from '../../decorators';
+import { UserDto } from './dto/user.dto';
 
 @ApiTags('用户')
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
-
   @MyUniDefine({
     summary: '创建用户',
     method: Method.Post,
@@ -24,7 +24,11 @@ export class UserController {
 
   @UniDefine({
     summary: '查询所有用户',
-    method: Method.Get
+    method: Method.Get,
+    response: {
+      type: 'list',
+      itemType: UserDto
+    }
   })
   findAll() {
     return this.userService.findAll();
@@ -33,7 +37,10 @@ export class UserController {
   @UniDefine({
     summary: '查询单个用户',
     method: Method.Get,
-    path: '/:id'
+    path: '/:id',
+    response: {
+      type: UserDto
+    }
   })
   findOne(@Param('id') id: string) {
     return this.userService.findOne(+id);
@@ -44,7 +51,7 @@ export class UserController {
     method: Method.Patch,
     path: '/:id',
     body: {
-      type: UpdateUserDto
+      type: UserDto
     }
   })
   update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {

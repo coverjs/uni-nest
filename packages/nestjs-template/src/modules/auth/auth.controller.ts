@@ -14,7 +14,7 @@ export class AuthController {
     description: '登录授权获取token',
     isPublic: true,
     response: {
-      model: AuthVo
+      type: AuthVo
     },
     body: {
       type: AuthDto

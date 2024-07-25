@@ -22,10 +22,10 @@ export class UploadController {
           }
         }
       }
-    },
-    response: {
-      type: 'string'
     }
+    // response: {
+    //   type: 'string'
+    // }
   })
   @ApiConsumes('multipart/form-data')
   @UseInterceptors(FileInterceptor('file'))
@@ -50,10 +50,10 @@ export class UploadController {
           }
         }
       }
-    },
-    response: {
-      type: 'string'
     }
+    // response: {
+    //   type: 'string'
+    // }
   })
   @ApiConsumes('multipart/form-data')
   @UseInterceptors(FilesInterceptor('files'))

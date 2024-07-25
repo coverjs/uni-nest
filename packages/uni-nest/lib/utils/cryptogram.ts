@@ -7,7 +7,7 @@ export function makeSalt(): string {
 }
 
 /**
- * Encrypt password 使用盐对密码进行 sha1 加密
+ * 使用盐对密码进行 sha1 加密
  * @param password 密码
  * @param salt 加盐
  */

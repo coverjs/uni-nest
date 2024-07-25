@@ -37,6 +37,7 @@ export interface ListResponseOptions extends ResponseOptions {
 }
 
 type SchemaType =
+  | { type?: Type<any>; example?: any }
   | {
       type?: 'number';
       example?: any;
@@ -46,14 +47,13 @@ type SchemaType =
       example?: any;
     }
   | { type?: 'boolean' }
-  | { type?: 'object'; model?: Type<any> }
+  // | { type?: 'object' }
   | {
       type?: 'array';
-      model?: Type<any>;
-      arrayItemType?: 'string' | 'number';
+      itemType?: Type<any> | 'string' | 'number';
       example?: any;
     }
-  | { type?: 'list'; model: Type<any> };
+  | { type?: 'list'; itemType?: Type<any> | 'string' | 'number' };
 
 export type UnityResponseOptions = ResponseOptions & SchemaType;
 
